@@ -1,0 +1,73 @@
+{% load static %}
+{#link rel="stylesheet" type="text/css" href="Portfolio/main.css" >#}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="{% static '../static_my_project/main.css' %}">
+    <link rel="stylesheet" media="screen and (max-width:1170px)" href="table.css">
+{#     <link rel="stylesheet" media="screen and (max-width:695px)" href="phone.css">#}
+
+{##}
+{#asan kase?#}
+
+{#    {% if title %}#}
+{#        <title>MY PORTFOLIO - {{ title }}</title>#}
+{#    {% else %}#}
+{#        <title> MY PORTFOLIO </title>#}
+{#    {% endif %}#}
+
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a> </li>
+            <li><a href="#portfolio">Portfolio</a> </li>
+            <li><a href="#About">About Me</a> </li>
+            <li><a href="#Contact">Contact Me</a> </li>
+
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1 class="heading"> HI, I AM</h1>
+        <h1 class="heading">AUDREY ANNE V. TAN</h1>
+        <br><br>
+        <p>AND THIS IS MY PORTFOLIO</p>
+    </section>
+
+    <section id="About Me">
+        <h1 class="heading">About Me</h1>
+        <div class="about">
+            <div class="box">
+                <img src="{% static '../static_my_project/Pic.jpg' %}" alt="My Pic" />
+                <div class="name"
+                <h2>I'm Audrey Tan</h2>
+                <p> And I love to explore more things, and willing to learn everything</p>
+
+                <h2>Education</h2>
+                <p>I am currently a second-year computer engineering student at Holy Angel University. </p>
+            </div>
+            <div class="box">
+                <h2>Goals</h2>
+                <p>My current right now is to become an Certified Computer Engineer</p>
+            </div>
+
+        </div>
+    </section>
+    {% block content %}
+         <section id="contact">
+        <h1 class="heading">Contact</h1>
+        <form action="" class="form">
+            <input type="text" name="name" class="input" placeholder="=Enter Your Name">
+            <input type="email" name="email" class="input"
+                   placeholder="Enter Your Message">
+            <textarea name="message" id="message" cols="70" rows="20" placeholder="Enter Your Message"></textarea>
+            <input type="submit" value="Sumbit" id="Submit">
+        </form>
+    </section>
+    {% endblock %}
+</body>
+</html>
